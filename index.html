@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toditos Fit</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #111111; /* Tamna pozadina oko slike */
+            font-family: Arial, sans-serif;
+        }
+
+        /* Kontejner koji spaja sliku i dugme */
+        .pozadina-kontejner {
+            position: relative;
+            display: inline-block;
+            max-width: 100%;
+        }
+
+        /* Prikaz slike */
+        .pozadina-kontejner img {
+            display: block;
+            width: 100%;
+            max-width: 500px; /* Maksimalna širina slike */
+            height: auto;
+            border-radius: 12px;
+        }
+
+        /* DUGME U DONJEM DELU SLIKE */
+        .dugme-preko {
+            position: absolute;
+            
+            /* POZICIJA DUGMETA */
+            bottom: 12%; /* Udaljenost od dna slike */
+            left: 50%;   /* Centrira dugme horizontalno */
+            transform: translateX(-50%);
+
+            /* IZGLED DUGMETA */
+            padding: 14px 28px;
+            background-color: #ff385c; /* Boja dugmeta */
+            color: #ffffff;            /* Boja teksta */
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            border-radius: 50px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.4);
+            text-align: center;
+            white-space: nowrap;
+            transition: 0.3s ease;
+        }
+
+        /* Efekat kada se pređe mišem preko dugmeta */
+        .dugme-preko:hover {
+            background-color: #e02e4c;
+            transform: translateX(-50%) scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="pozadina-kontejner">
+        <!-- Tvoja slika podignuta na GitHub -->
+        <img src="pozadina.jpg" alt="Pozadinska slika">
+
+        <!-- Klikabilno dugme preko slike -->
+        <a href="https://onlyfans.com/drtonni" class="dugme-preko" target="_blank">
+            Lo que estas buscando esta aqui
+        </a>
+    </div>
+
+</body>
+</html>
